@@ -10,10 +10,11 @@ async function gerarPokemon(num) {
     }
 }
 
-(async function setPokemonImg() {
+async function setPokemonImg(num) {
     const main = document.getElementById('root')
-    const pokemon = await gerarPokemon(1)
-    main.innerHTML = `
+    const pokemon = await gerarPokemon(num)
+
+    main.innerHTML += `
         <article>
             <h2>${pokemon.name}</h2>
             <img src="${pokemon.sprite}" alt="">
@@ -25,4 +26,6 @@ async function gerarPokemon(num) {
         </article>
     `
 
-})()
+}
+
+for(let i = 0; i < 152; i++) setPokemonImg(i)

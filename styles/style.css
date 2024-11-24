@@ -5,6 +5,13 @@
     --pazul: #8fb1bd;
 }
 
+#root {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 * {
     border: 0;
     padding: 0;
