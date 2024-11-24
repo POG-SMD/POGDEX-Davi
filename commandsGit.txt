@@ -1,0 +1,47 @@
+Assign user to active session
+git config --global user.name "<your_name>"
+
+Assign email to active session:
+git config --global user.email "<your_email>"
+
+Create a new branch or branch:
+git checkout -b <branch name>
+
+Change branch/branch:
+git checkout <branch name>
+
+Validate modified files within the project. In red it shows the modified files. In green, it shows the files that were added by "git add":
+git status
+
+Placing the modified file in a safe area (The "." after the 'git add' command adds all files in red indicated after the git status):
+git add .
+
+Create a new version of the project with the creator references:
+git commit -m "<change_text>"
+
+Change the main branch name from master to main (this is currently recommended best practice)
+git branch -M "main"
+
+Transferring the commit from the local repository (from my machine) to a repository on the Github platform (Origin is the name used to refer to our repository. Once this is done, the local repository will be connected to the Github repository, however, the commit we give on the machine does not automatically go up to the platform...)
+git remote add origin <repository link>
+
+Upload, for the first time, the changes to the remote repository (github):
+git push -u origin <branch you want to push (main or develop, for example)>
+
+Up, after the first time (without the "-u", the changes to the remote repository (github)):
+git push origin <branch you want to push (main or develop, for example)>
+
+Pull changes from repository:
+git pull
+
+Validate my comments and modifications:
+git log
+
+Add the contents of the current branch to the contents of another branch:
+git merge <branch_name>
+
+Show the changes made:
+gitk
+
+To check the installed git version
+git -v
