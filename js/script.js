@@ -4,20 +4,28 @@ async function gerarPokemon(num) {
     return {
         name: json.name,
         type1: json.types[0].type.name,
-        type2: json.types[1].type.name,
+        type2: json.types[1] ? json.types[1].type.name: '' ,
         sprite: json.sprites.other.showdown.front_default
         
     }
 }
 
-(async function setPokemonImg() {
+async function setPokemonImg(num) {
     const main = document.getElementById('root')
-    const pokemon = await gerarPokemon(1)
-    main.innerHTML = `
+    const pokemon = await gerarPokemon(num)
+
+    main.innerHTML += `
         <article>
-            <h2 id="title">${pokemon.name}</h2>
-            <img id="card" src="${pokemon.sprite}" alt="">
+            <h2>${pokemon.name}</h2>
+            <img src="${pokemon.sprite}" alt="">
+            <div>
+                <p class="type">${pokemon.type1}</p>
+                ${pokemon.type2 ? `<p class="type">${pokemon.type2}</p>`
+                : ''}
+            </div>
         </article>
     `
 
-})()
+}
+
+for(let i = 0; i < 152; i++) setPokemonImg(i)
