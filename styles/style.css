@@ -25,36 +25,39 @@ article {
     gap: 4rem;
     transition: all .2s;
 
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 .2rem .8rem #00000070;
+    }
+
+    
+    & h2 {
+        font-size: 3rem;
+        text-transform: capitalize;
+        color: var(--parrom);
+        text-align: center;
+    }
+
+    & img {
+        align-self: center;
+        height: 8rem;
+    }
+
+    & div {
+        display: flex;
+        justify-content: center;
+        font-size: 2.8rem;
+        gap: 1rem;
+
+        & .type {
+            background-color: var(--pazul);
+            padding: .3rem .7rem;
+            border-radius: .5rem;
+            text-transform: uppercase;
+        }
+    
+    }
+
 }
 
-article:hover {
-    transform: scale(1.02);
-    box-shadow: 0 .2rem .8rem #00000070;
-}
 
-h2 {
-    font-size: 3rem;
-    text-transform: capitalize;
-    color: var(--parrom);
-    text-align: center;
-}
-
-img {
-    align-self: center;
-    height: 8rem;
-}
-
-div {
-    display: flex;
-    justify-content: center;
-    font-size: 2.8rem;
-    gap: 1rem;
-
-}
-
-div .type {
-    background-color: var(--pazul);
-    padding: .3rem .7rem;
-    border-radius: .5rem;
-    text-transform: uppercase;
-}
